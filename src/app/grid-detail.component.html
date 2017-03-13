@@ -7,8 +7,9 @@
         </tr> 
     </thead>
     <tbody>
-        <tr>
-            <td>
+        <tr *ngFor="let round of rounds">
+            <td *ngFor="let player of round.players">
+                <input [(ngModel)]="player.score"/>
             </td>
         </tr>
     </tbody>
