@@ -1,8 +1,11 @@
 <alert type="success">
-  {{title}}
+  hello
 </alert>
+<h1>
+  {{title}}
+</h1>
 <div>
-  <button (click)="start()">
+  <button (click)="smModal.show()">
     开始
   </button>
   <button (click)="add()">
@@ -11,4 +14,22 @@
   <button (click)="restart()">
     重新开始
   </button>
+</div>
+
+<div class="modal-fade" bsModal #smModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Small modal</h4>
+        <button type="button" class="close pull-right" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        底部
+      </div>
+    </div>
+  </div>
 </div>
