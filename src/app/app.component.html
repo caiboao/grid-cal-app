@@ -1,6 +1,3 @@
-<alert type="success">
-  hello
-</alert>
 <h1>
   {{title}}
 </h1>
@@ -9,26 +6,29 @@
     开始
   </button>
   <button (click)="add()">
-    新增
+    新增玩家
   </button>
   <button (click)="restart()">
     重新开始
   </button>
 </div>
 
-<div class="modal-fade" bsModal #smModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade" bsModal #smModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title pull-left">Small modal</h4>
+        <h4 class="modal-title pull-left">新玩家</h4>
         <button type="button" class="close pull-right" (click)="smModal.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <label for="name">名字</label>
+        <input type="text" name="name">
       </div>
       <div class="modal-footer">
-        底部
+        <button >添加</button>
+        <button >完成</button>
       </div>
     </div>
   </div>

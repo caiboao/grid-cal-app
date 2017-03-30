@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import {Player} from './player';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,12 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = '计分';
+
+  allPlayers:Player[]=[]; //所有玩家
+  addPlayer(newplayers:Player[]):void{
+    newplayers.forEach(p=>this.allPlayers.push(p));
+  }
+  restart(){
+
+  }  
 }
