@@ -16,6 +16,8 @@ export class AppComponent {
     newplayers.forEach(p=>this.allPlayers.push(p));
   }
   restart(){
+    this.allPlayers=[];
+  }
+  
 
-  }  
 }
