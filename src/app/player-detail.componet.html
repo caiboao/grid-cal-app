@@ -1,0 +1,7 @@
+<div *ngIf="playerList">
+    <ul>
+        <li *ngFor="let player of playerList;let i=index">
+            <span>玩家{{i+1}}:{{player.name}}</span>
+        </li>
+    </ul> 
+</div>
